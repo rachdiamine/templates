@@ -1,0 +1,28 @@
+{
+  "id": "90ISJJA9",
+  "name": "ZA ICASA Application Approved",
+  "version": "V1",
+  "subject": {
+    "parts": [
+      {
+        "is_public": "no",
+        "regex": "Application "
+      },
+      {
+        "is_public": "yes",
+        "field": "application_status",
+        "regex": ".+?"
+      },
+      {
+        "is_public": "no",
+        "regex": " - #?"
+      },
+      {
+        "is_public": "yes",
+        "field": "application_number",
+        "regex": ".+"
+      }
+    ]
+  },
+  "body": null
+}
