@@ -1,0 +1,43 @@
+{
+  "id": "90ISJJA9_V2",
+  "name": "ZA ICASA Application Approved",
+  "version": "V2",
+  "subject": {
+    "parts": [
+      {
+        "is_public": "no",
+        "regex": "Application "
+      },
+      {
+        "is_public": "yes",
+        "field": "application_status",
+        "regex": ".+?"
+      },
+      {
+        "is_public": "no",
+        "regex": " - #?"
+      },
+      {
+        "is_public": "yes",
+        "field": "application_number",
+        "regex": ".+"
+      }
+    ]
+  },
+  "body": {
+    "parts": [
+      {
+        "is_public": "no",
+        "regex": "Equipment Model.+:  "
+      },
+      {
+        "is_public": "yes",
+        "field": "model_name",
+        "regex": ".+"
+      },
+      {
+        "is_public": "no",
+        "regex": "<br>"
+      }
+    ]
+}
