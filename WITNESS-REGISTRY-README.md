@@ -51,7 +51,7 @@ This registry serves as the source of truth for:
 ### 1. Extension Fetches Registry on Startup
 
 ```javascript
-const REGISTRY_URL = 'https://raw.githubusercontent.com/rachdiamine/ghostwitness-registry/main/witness-registry.json';
+const REGISTRY_URL = 'https://raw.githubusercontent.com/rachdiamine/templates/main/witness-registry.json';
 
 async function loadRegistry() {
   const response = await fetch(REGISTRY_URL);
@@ -267,8 +267,8 @@ contract GhostWitnessRegistry {
 
 ## Contact
 
-- **Issues:** https://github.com/rachdiamine/ghostwitness-registry/issues
-- **Discussions:** https://github.com/rachdiamine/ghostwitness-registry/discussions
+- **Issues:** https://github.com/rachdiamine/templates/issues
+- **Discussions:** https://github.com/rachdiamine/templates/discussions
 - **Email:** amine.rachdi@realtimetypeapprovals.com
 
 ## License
