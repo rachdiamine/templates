@@ -1,11 +1,11 @@
 {
   "epoch": 0,
   "protocol_version": "1.3",
-  "updated_at": "2025-12-30T12:00:00Z",
+  "updated_at": "2025-12-30T19:50:00Z",
   "witnesses": [
-    "0x9366cEE5c29d516dd43a265d71CD46b4098C7F3E"
+    "0x7d3dC85811b8F3803cb6252337f18FdB81C6C01a"
   ],
   "tees": [
-    "https://c2f1a62fc926ff43cfdb0f81564e161c3608b5c3-3000.dstack-pha-prod9.phala.network/"
+    "https://c2f1a62fc926ff43cfdb0f81564e161c3608b5c3-3000.dstack-pha-prod9.phala.network"
   ]
 }
