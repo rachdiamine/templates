@@ -1,0 +1,110 @@
+{
+  "id": "icasa_witness_v2",
+  "name": "ICASA Type Approval Search",
+  "version": "2.0",
+
+  "metadata": {
+    "authority": "ICASA",
+    "country": "South Africa",
+    "domain": "online.icasa.org.za",
+    "created_at": "2026-01-04"
+  },
+
+  "parameters": [
+    {
+      "name": "number",
+      "type": "string",
+      "required": true,
+      "prompt": "Enter application number",
+      "description": "Attest a specific application or certificate number"
+    }
+  ],
+  "url_pattern": {
+        "active_on": "https://online.icasa.org.za/TypeApproval/ManageTypeApprovals"
+      },
+  "processors": [
+    {
+      "processor_id": "fetch_application",
+      "processor_name": "Fetch Application Page",
+
+      "processor_action": {
+        "action_type": "html_fetch",
+        "timeout": 15000,
+        "endpoints": [
+         "https://online.icasa.org.za/TypeApproval/ManageTypeApprovals"
+      ]
+      },
+
+     
+
+      "extractors": [
+        {
+          "id": "application_row",
+          "name": "Extract application row data",
+          "type": "regex",
+          "repeat": false,
+          "parts": [
+            {
+              "is_public": "no",
+              "regex": "<table.+(?:id=\"TypeApprovalTable\"[\\s\\S]*?<tbody[^>]*>[\\s\\S]*?)?<tr[^>]*>\\s*<td[^>]*>\\s*"
+            },
+            {
+              "is_public": "yes",
+              "field": "type",
+              "regex": ".+"
+            },
+            {
+              "is_public": "no",
+              "regex": "\\s*</td>\\s*<td[^>]*>\\s*"
+            },
+            {
+              "is_public": "yes",
+              "field": "number",
+              "regex": "{number}"
+            },
+            {
+              "is_public": "no",
+              "regex": "\\s*</td>\\s*<td[^>]*>\\s*"
+            },
+            {
+              "is_public": "yes",
+              "field": "licence_holder",
+              "regex": ".+"
+            },
+            {
+              "is_public": "no",
+              "regex": "\\s*</td>\\s*<td[^>]*>\\s*"
+            },
+            {
+              "is_public": "yes",
+              "field": "description",
+              "regex": ".+"
+            },
+            {
+              "is_public": "no",
+              "regex": "\\s*</td>\\s*<td[^>]*>\\s*"
+            },
+            {
+              "is_public": "yes",
+              "field": "status",
+              "regex": ".+"
+            },
+            {
+              "is_public": "no",
+              "regex": "\\s*</td>\\s*<td[^>]*>\\s*"
+            },
+            {
+              "is_public": "yes",
+              "field": "date",
+              "regex": ".+"
+            },
+            {
+              "is_public": "no",
+              "regex": "\\s*</td>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

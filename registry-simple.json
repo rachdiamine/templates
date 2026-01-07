@@ -1,0 +1,69 @@
+{
+  "version": "2.0",
+  "updated": "2026-01-04",
+
+  "templates": [
+    {
+      "id": "icasa_app_witness",
+      "name": "ICASA Type Approval",
+      "url": "https://online.icasa.org.za/TypeApproval/ManageTypeApprovals",
+      "tags": ["south-africa", "icasa"],
+      "enabled":false
+    },
+    {
+      "id": "icasa_witness_v2",
+      "name": "ICASA Type Approval",
+      "url": "https://online.icasa.org.za/TypeApproval/ManageTypeApprovals",
+      "tags": ["south-africa", "icasa"],
+      "enabled":true
+    },
+    
+
+    {
+      "id": "tanzania_tcra_witness",
+      "name": "TCRA Type Approval",
+      "url": "https://tanzanite.tcra.go.tz/type-approval-application-details.htm",
+      "tags": ["tanzania", "tcra"],
+      "enabled":true
+    },
+
+
+
+    {
+      "id": "tanzania_tcra_ajax_witness",
+      "name": "TCRA Applications (AJAX)",
+      "url": "https://tanzanite.tcra.go.tz",
+      "tags": ["tanzania", "tcra"],
+      "enabled":true
+    },
+    {
+      "id": "tanzania_tcra_witness_V2",
+      "name": "TCRA Applications (AJAX) V2",
+      "url": "https://tanzanite.tcra.go.tz",
+      "tags": ["tanzania", "tcra"],
+      "enabled":true
+    },
+    {
+      "id": "tanzania_tcra_witness_V3",
+      "name": "TCRA Applications V3 (Multi-processor)",
+      "url": "https://tanzanite.tcra.go.tz",
+      "tags": ["tanzania", "tcra"],
+      "enabled":true
+    },
+    {
+      "id": "tanzania_tcra_witness_V4",
+      "name": "TCRA Full with PDF (CSS Selectors)",
+      "url": "https://tanzanite.tcra.go.tz",
+      "tags": ["tanzania", "tcra"],
+      "enabled":true
+    },
+    {
+      "id": "tanzania_tcra_witness_V4_MOCK",
+      "name": "TCRA Full with PDF (CSS Selectors)",
+      "url": "https://tanzanite.tcra.go.tz",
+      "tags": ["tanzania", "tcra"],
+      "enabled":true
+    }
+
+  ]
+}

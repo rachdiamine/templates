@@ -1,0 +1,149 @@
+{
+  "id": "tanzania_tcra_invoice_V1",
+  "name": "Tanzania TCRA - invoice",
+  "version": "1.0",
+  "type": "pipeline",
+
+  "url_pattern": {
+    "active_on": "https://tanzanite.tcra.go.tz"
+  },
+  "metadata": {
+    "authority": "TCRA",
+    "country": "Tanzania",
+    "domain": "tanzanite.tcra.go.tz",
+    "timezone": "Africa/Dar_es_Salaam",
+    "created_at": "2026-01-05",
+    "version": "4.0",
+    "notes": "two-stage pipeline: HTML details → PDF download"
+  },
+
+  "parameters": [
+    {
+      "name": "number",
+      "type": "string",
+      "required": true,
+      "prompt": "Application Number",
+      "description": "Enter full application number (e.g., TCRA/APP/TECESRD/0252/2025)"
+    }
+  ],
+
+  "processors": [
+    
+      
+    
+    {
+      "processor_id": "fetch_application_details",
+      "processor_name": "Fetch Application Details Page",
+      "processor_action": {
+        "action_type": "html_fetch",
+        "timeout": 15000,
+        "endpoints": [
+         "https://tanzanite.tcra.go.tz/applications-invoice.htm"
+        ]
+      },
+      "extractors": [
+        {
+          "id": "extract_details",
+          "name": "invoice details",
+          "type": "regex",
+          "repeat": false,
+          "fields": [
+            {
+              "name": "manufacturer_name",
+              "selector": "td:has(span:contains('Manufacturer Name')) + td",
+              "attribute": "text"
+            },
+            {
+              "name": "licence_pdf_url",
+              "selector": "a.btn-success[href*='lims-ndoo']",
+              "attribute": "href"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "processor_id": "download_licence_pdf",
+      "processor_name": "Download Licence PDF",
+      "condition": {
+        "field": "fetch_application_details.licence_pdf_url",
+        "operator": "exists",
+        "value": ""
+      },
+      "processor_action": {
+        "action_type": "file_download",
+        "timeout": 30000,
+        "endpoints": [
+          "{{fetch_application_details.licence_pdf_url}}"
+        ]
+      },
+      "extractors": []
+    }
+  ],
+
+
+  "proof_data": {
+    "output_format":"json",
+    "parts": [
+      {
+        "source":"fetch_application.applicationNumber",
+        "name":"application_number"
+      },
+      {
+        "source":"fetch_application.statusName",
+        "name":"application_status"
+      },
+      {
+        "source":"fetch_application.equipmentModel",
+        "name":"model_name"
+      },
+      {
+        "source":"fetch_application.licenceNumber",
+        "name":"license_number"
+      },
+      {
+        "source":"fetch_application_details.manufacturer_name",
+        "name":"manufacturer_name"
+      },
+      {
+        "source":"fetch_application.applicationDate",
+        "name":"application_date",
+        "transform": {
+          "function": "date_to_timestamp",
+          "format": "DD MMM YYYY hh:mm A"
+        }
+      },
+      {
+        "source":"download_licence_pdf.file_hash",
+        "name":"licence_pdf_hash"
+      }
+    ]
+  },
+
+  "more_data": {
+    "output_format":"json",
+    "parts": [
+      {
+        "source":"fetch_application.productName",
+        "name":"product_name"
+      },
+      {
+        "source":"fetch_application.issuedAt",
+        "name":"issued_date"
+      },
+      {
+        "source":"fetch_application.applicationDate",
+        "name":"application_date_original"
+      },
+      {
+        "source":"fetch_application_details.licence_pdf_url",
+        "name":"licence_pdf_url"
+      },
+      {
+        "source":"download_licence_pdf.filename",
+        "name":"licence_pdf_filename"
+      }
+    ]
+  }
+
+}

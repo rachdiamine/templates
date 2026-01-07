@@ -1,0 +1,75 @@
+{
+  "id": "tanzania_tcra_ajax_witness",
+  "name": "Tanzania TCRA - Application Details (AJAX)",
+  "version": "2.0",
+  "protocol_version": "2.0",
+  "type": "pipeline",
+
+  "url_pattern": {
+    "active_on": "https://tanzanite.tcra.go.tz"
+  },
+  "metadata": {
+    "authority": "TCRA",
+    "country": "Tanzania",
+    "domain": "tanzanite.tcra.go.tz",
+    "created_at": "2026-01-03",
+    "version": "2.0",
+    "notes": "Single-stage pipeline with AJAX capture and dual output (minimal for blockchain, full for management)"
+  },
+
+  "parameters": [
+    {
+      "name": "number",
+      "type": "string",
+      "required": true,
+      "prompt": "Application Number",
+      "description": "Enter full application number (e.g., TCRA/APP/TECESRD/0252/2025)"
+    }
+  ],
+
+  "processors": [
+    {
+      "processor_id": "fetch_application",
+      "processor_name": "Fetch Application",
+      "processor_action": {
+        "action_type": "ajax_capture",
+        "timeout": 15000,
+        "endpoints": [
+         "https://tanzanite.tcra.go.tz/v1/get-all-application-list-from-lnc-by-ajax"
+      ]
+      },
+
+       
+      "extractors": [
+        {
+          "id": "filter_application",
+          "name": "Filter application by number",
+          "type": "json_filter",
+          "filter": {
+            "field": "applicationNumber",
+            "operator": "equals",
+            "value": "{number}"
+          },
+          "output_fields": [
+            "id",
+            "applicationNumber",
+            "applicationDate",
+            "productName",
+            "rootCategoryId",
+            "rootCategoryName",
+            "statusName",
+            "submissionStatus",
+            "licenceStatus",
+            "licenceNumber",
+            "issuedAt",
+            "expiringAt",
+            "equipmentModel",
+            "currentDecision",
+            "applicationType"
+          ]
+        }
+      ]
+      }
+      ]
+
+}

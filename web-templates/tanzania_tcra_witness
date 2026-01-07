@@ -1,0 +1,165 @@
+{
+  "id": "tanzania_tcra_type_approval",
+  "name": "Tanzania TCRA Type Approval",
+  "version": "1.0",
+  "protocol_version": "1.0",
+
+  "url_pattern": {
+    "base": "https://tanzanite.tcra.go.tz/type-approval-application-details.htm/{id}/1"
+  },
+
+  "parameters": [
+    {
+      "name": "applicationNumber",
+      "type": "string",
+      "required": false,
+      "prompt": "Enter application number (optional)",
+      "description": "Extract specific application number"
+    }
+  ],
+
+  "patterns": {
+    "extractors": [
+      {
+        "id": "application_details",
+        "name": "Extract application details",
+        "repeat": false,
+        "parts": [
+          {
+            "is_public": "no",
+            "regex": "<td[^>]*>\\s*Application Number\\s*</td>\\s*<td[^>]*>\\s*"
+          },
+          {
+            "is_public": "yes",
+            "field": "application_number",
+            "regex": "([^<]+)"
+          },
+          {
+            "is_public": "no",
+            "regex": "\\s*</td>"
+          }
+        ]
+      },
+      {
+        "id": "certificate_number",
+        "name": "Extract certificate number",
+        "repeat": false,
+        "parts": [
+          {
+            "is_public": "no",
+            "regex": "<td[^>]*>\\s*Certificate Number\\s*</td>\\s*<td[^>]*>\\s*"
+          },
+          {
+            "is_public": "yes",
+            "field": "certificate_number",
+            "regex": "([^<]*)"
+          },
+          {
+            "is_public": "no",
+            "regex": "\\s*</td>"
+          }
+        ]
+      },
+      {
+        "id": "status",
+        "name": "Extract status",
+        "repeat": false,
+        "parts": [
+          {
+            "is_public": "no",
+            "regex": "<dt[^>]*>\\s*Status:\\s*</dt>\\s*</div>\\s*<div[^>]*>\\s*<dd[^>]*>\\s*<span[^>]*>\\s*"
+          },
+          {
+            "is_public": "yes",
+            "field": "status",
+            "regex": "([^<]*)"
+          },
+          {
+            "is_public": "no",
+            "regex": "\\s*</span>"
+          }
+        ]
+      },
+      {
+        "id": "date_issued",
+        "name": "Extract date issued",
+        "repeat": false,
+        "parts": [
+          {
+            "is_public": "no",
+            "regex": "<dt[^>]*>\\s*Date Issued:\\s*</dt>\\s*</div>\\s*<div[^>]*>\\s*<dd[^>]*>\\s*"
+          },
+          {
+            "is_public": "yes",
+            "field": "issue_date",
+            "regex": "([^<]*)"
+          },
+          {
+            "is_public": "no",
+            "regex": "\\s*</dd>"
+          }
+        ]
+      },
+      {
+        "id": "model_name",
+        "name": "Extract model name",
+        "repeat": false,
+        "parts": [
+          {
+            "is_public": "no",
+            "regex": "<span[^>]*>\\s*<i[^>]*></i>\\s*Model Name\\s*</span>\\s*</td>\\s*<td[^>]*>\\s*"
+          },
+          {
+            "is_public": "yes",
+            "field": "model_name",
+            "regex": "([^<\\s]+)"
+          },
+          {
+            "is_public": "no",
+            "regex": "\\s*</td>"
+          }
+        ]
+      },
+      {
+        "id": "tracker_status",
+        "name": "Extract latest tracker status",
+        "repeat": false,
+        "parts": [
+          {
+            "is_public": "no",
+            "regex": "<div class=\"ibox-title\">\\s*<h5>\\s*Application Tracker\\s*</h5>.*?<div class=\"stream-panel\">.*?<span class=\"date[^\"]*\">\\s*"
+          },
+          {
+            "is_public": "yes",
+            "field": "tracker_date",
+            "regex": "([^<]+)"
+          },
+          {
+            "is_public": "no",
+            "regex": "\\s*</span>.*?</div>\\s*"
+          },
+          {
+            "is_public": "yes",
+            "field": "tracker_status",
+            "regex": "([^<]+)"
+          },
+          {
+            "is_public": "no",
+            "regex": "\\s*</div>"
+          }
+        ]
+      }
+    ]
+  },
+
+  "output": {
+    "format": "json"
+  },
+
+  "metadata": {
+    "authority": "TCRA",
+    "country": "Tanzania",
+    "domain": "tanzanite.tcra.go.tz",
+    "created_at": "2026-01-03"
+  }
+}
