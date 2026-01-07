@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "updated": "2026-01-04",
+  "updated": "2026-01-07",
 
   "templates": [
     {
@@ -8,62 +8,73 @@
       "name": "ICASA Type Approval",
       "url": "https://online.icasa.org.za/TypeApproval/ManageTypeApprovals",
       "tags": ["south-africa", "icasa"],
-      "enabled":false
+      "hash": null,
+      "enabled": false
     },
     {
       "id": "icasa_witness_v2",
       "name": "ICASA Type Approval",
       "url": "https://online.icasa.org.za/TypeApproval/ManageTypeApprovals",
       "tags": ["south-africa", "icasa"],
-      "enabled":true
+      "hash": "931afa2e17fbf77407605bec4e56bdcd",
+      "enabled": true
     },
-    
-
     {
       "id": "tanzania_tcra_witness",
       "name": "TCRA Type Approval",
       "url": "https://tanzanite.tcra.go.tz/type-approval-application-details.htm",
       "tags": ["tanzania", "tcra"],
-      "enabled":true
+      "hash": "247e477c9b3f7fdaf924401fcfefe540",
+      "enabled": true
     },
-
-
-
     {
       "id": "tanzania_tcra_ajax_witness",
       "name": "TCRA Applications (AJAX)",
       "url": "https://tanzanite.tcra.go.tz",
       "tags": ["tanzania", "tcra"],
-      "enabled":true
+      "hash": "2dd34128c2ef71bd1f2e7651fd1b44fd",
+      "enabled": true
     },
     {
       "id": "tanzania_tcra_witness_V2",
       "name": "TCRA Applications (AJAX) V2",
       "url": "https://tanzanite.tcra.go.tz",
       "tags": ["tanzania", "tcra"],
-      "enabled":true
+      "hash": "fe0f89af6691e2100fca84c306f85ceb",
+      "enabled": true
     },
     {
       "id": "tanzania_tcra_witness_V3",
       "name": "TCRA Applications V3 (Multi-processor)",
       "url": "https://tanzanite.tcra.go.tz",
       "tags": ["tanzania", "tcra"],
-      "enabled":true
+      "hash": "48e76771465bed9a2e4252f434798b0e",
+      "enabled": true
     },
     {
       "id": "tanzania_tcra_witness_V4",
       "name": "TCRA Full with PDF (CSS Selectors)",
       "url": "https://tanzanite.tcra.go.tz",
       "tags": ["tanzania", "tcra"],
-      "enabled":true
+      "hash": "1da6a4132634a33dd82661e3da154466",
+      "enabled": true
     },
     {
       "id": "tanzania_tcra_witness_V4_MOCK",
-      "name": "TCRA Full with PDF (CSS Selectors)",
+      "name": "TCRA Full with PDF (CSS Selectors) - Mock Server",
+      "url": "http://localhost:4000",
+      "tags": ["tanzania", "tcra", "testing", "mock"],
+      "hash": "1e67e29d21649cb32e83cfaeb403c5d0",
+      "environment": "development",
+      "enabled": true
+    },
+    {
+      "id": "tanzania_tcra_invoice_V1",
+      "name": "TCRA Invoice Extraction",
       "url": "https://tanzanite.tcra.go.tz",
-      "tags": ["tanzania", "tcra"],
-      "enabled":true
+      "tags": ["tanzania", "tcra", "invoice"],
+      "hash": "c1ede144b8518b688f620deef8f16a61",
+      "enabled": true
     }
-
   ]
 }
