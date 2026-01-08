@@ -86,8 +86,8 @@
       "witnesses": [
         {
           "witness_address": "0xa2478023dbE653eeF1ce7ab2a6e5582F178e5FF2",
-          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
-          "endpoint": "http://localhost:3000"
+          "app_id": "deda5cffd6985123f9ef6c9b59cb01dc68758df6",
+          "endpoint": "https://deda5cffd6985123f9ef6c9b59cb01dc68758df6-3000.dstack-pha-prod9.phala.network"
         }
       ]
     },
@@ -98,9 +98,9 @@
       "end_time": "2026-01-10T00:00:00.000Z",
       "witnesses": [
         {
-          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
-          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
-          "endpoint": "http://localhost:3000"
+          "witness_address": "0xa2478023dbE653eeF1ce7ab2a6e5582F178e5FF2",
+          "app_id": "deda5cffd6985123f9ef6c9b59cb01dc68758df6",
+          "endpoint": "https://deda5cffd6985123f9ef6c9b59cb01dc68758df6-3000.dstack-pha-prod9.phala.network"
         }
       ]
     },
@@ -111,9 +111,9 @@
       "end_time": "2026-01-15T00:00:00.000Z",
       "witnesses": [
         {
-          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
-          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
-          "endpoint": "http://localhost:3000"
+          "witness_address": "0xa2478023dbE653eeF1ce7ab2a6e5582F178e5FF2",
+          "app_id": "deda5cffd6985123f9ef6c9b59cb01dc68758df6",
+          "endpoint": "https://deda5cffd6985123f9ef6c9b59cb01dc68758df6-3000.dstack-pha-prod9.phala.network"
         }
       ]
     },
@@ -124,9 +124,9 @@
       "end_time": "2026-02-01T00:00:00.000Z",
       "witnesses": [
         {
-          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
-          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
-          "endpoint": "http://localhost:3000"
+          "witness_address": "0xa2478023dbE653eeF1ce7ab2a6e5582F178e5FF2",
+          "app_id": "deda5cffd6985123f9ef6c9b59cb01dc68758df6",
+          "endpoint": "https://deda5cffd6985123f9ef6c9b59cb01dc68758df6-3000.dstack-pha-prod9.phala.network"
         }
       ]
     },
@@ -137,9 +137,9 @@
       "end_time": "2026-12-31T23:59:59.999Z",
       "witnesses": [
         {
-          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
-          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
-          "endpoint": "http://localhost:3000"
+          "witness_address": "0xa2478023dbE653eeF1ce7ab2a6e5582F178e5FF2",
+          "app_id": "deda5cffd6985123f9ef6c9b59cb01dc68758df6",
+          "endpoint": "https://deda5cffd6985123f9ef6c9b59cb01dc68758df6-3000.dstack-pha-prod9.phala.network"
         }
       ]
     }
