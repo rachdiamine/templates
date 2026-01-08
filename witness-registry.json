@@ -1,28 +1,147 @@
-
 {
- "epoches":[
- { "epoch": 0,
-  "protocol_version": "1.3",
-  "updated_at": "2025-12-30T19:50:00Z",
-  "witnesses": [
+  "epoches": [
     {
-      "witness_address":"0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
-       "app_id":    "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
-       "endpoint":"http://localhost:3000"
-    }
-    
-  ]
-},
-{ "epoch": 1,
-  "protocol_version": "1.3",
-  "updated_at": "2025-12-30T19:50:00Z",
-  "witnesses": [
+      "epoch": 0,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-08T15:11:47.431Z",
+      "end_time": "2026-01-08T15:21:47.431Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
     {
-      "witness_address":"0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
-       "app_id":    "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
-       "endpoint":"http://localhost:3000"
+      "epoch": 1,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-08T15:21:47.431Z",
+      "end_time": "2026-01-08T15:31:47.431Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 2,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-08T15:31:47.431Z",
+      "end_time": "2026-01-08T15:41:47.431Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 3,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-08T15:41:47.431Z",
+      "end_time": "2026-01-08T15:51:47.431Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 4,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-08T15:51:47.431Z",
+      "end_time": "2026-01-08T16:01:47.431Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 5,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-08T16:00:00.000Z",
+      "end_time": "2026-01-08T20:00:00.000Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 6,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-08T20:00:00.000Z",
+      "end_time": "2026-01-09T00:00:00.000Z",
+      "witnesses": [
+        {
+          "witness_address": "0xa2478023dbE653eeF1ce7ab2a6e5582F178e5FF2",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 7,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-09T00:00:00.000Z",
+      "end_time": "2026-01-10T00:00:00.000Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 8,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-10T00:00:00.000Z",
+      "end_time": "2026-01-15T00:00:00.000Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 9,
+      "protocol_version": "1.4",
+      "start_time": "2026-01-15T00:00:00.000Z",
+      "end_time": "2026-02-01T00:00:00.000Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "epoch": 10,
+      "protocol_version": "1.4",
+      "start_time": "2026-02-01T00:00:00.000Z",
+      "end_time": "2026-12-31T23:59:59.999Z",
+      "witnesses": [
+        {
+          "witness_address": "0x9366cEE5c29D516DD43a265d71Cd46B4098c7f3e",
+          "app_id": "ea549f02e1a25fabd1cb788380e033ec5461b2ff",
+          "endpoint": "http://localhost:3000"
+        }
+      ]
     }
-    
   ]
 }
-]
